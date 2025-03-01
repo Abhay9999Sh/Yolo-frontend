@@ -53,6 +53,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setUser(userData);
       } catch (error) {
         // User is not authenticated
+        console.log(error);
         setUser(null);
       } finally {
         setIsLoading(false);
