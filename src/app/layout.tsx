@@ -19,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> {/* ✅ Ensures proper mobile scaling */}
+      </head>
+      <body className={`${inter.className} bg-background text-foreground`}>
         <AuthProvider>
           <Header />
           <main className="min-h-screen flex items-center justify-center p-4">
