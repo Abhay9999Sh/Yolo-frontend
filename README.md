@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛠️ Authentication App - Frontend (Next.js 15+)
 
-## Getting Started
+🚀 **Live Demo:** [Frontend Deployed on Vercel](https://yolo-frontend-eight.vercel.app)  
+🌐 **Backend API:** [Backend Deployed on Render](https://yolo-backend-mvyt.onrender.com)
 
-First, run the development server:
+## **📌 Overview**
+This is the **frontend** of an authentication system built with **Next.js 15+**, **TypeScript**, **Tailwind CSS**, and **JWT Authentication**. It allows users to:
+- 🔹 Sign up, log in, and edit their profile.
+- 🔹 Authenticate using a secure **NestJS backend**.
+- 🔹 View user data after logging in.
+- 🔹 Logout securely.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **⚡ Tech Stack**
+- **Next.js 15+** (React Framework)
+- **TypeScript**
+- **Tailwind CSS** (For styling)
+- **Axios** (For API calls)
+- **Vercel** (Deployment)
+
+---
+
+## **🚀 How to Run the Frontend Locally**
+
+### **1️1 Clone the Repository**
+```sh
+git clone https://github.com/yourusername/frontend.git
+cd frontend
+```
+### **2 Install Dependencies**
+```sh
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **3 Configure Environment Variables**
+- Create a .env.local file in the root directory:
+```sh
+NEXT_PUBLIC_BACKEND_URL=https://yolo-backend-mvyt.onrender.com
+```
+-  If running the backend locally, use:
+  ```sh
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **4 Start the Development Server**
+```sh
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend will be available at http://localhost:3000.**
 
-## Learn More
+## 📌 API Endpoints (Consumed by Frontend)
 
-To learn more about Next.js, take a look at the following resources:
+- **`POST /auth/signup`** → Register a new user  
+- **`POST /auth/login`** → Authenticate user & return JWT  
+- **`GET /auth/me`** → Get logged-in user info (Protected)  
+- **`POST /auth/logout`** → Logout user  
+- **`GET /user/profile`** → Fetch user profile (Protected)  
+- **`PUT /user/profile`** → Update user profile (Protected)  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📌 **These API endpoints are handled by the backend**.
