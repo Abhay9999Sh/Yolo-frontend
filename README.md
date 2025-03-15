@@ -23,7 +23,7 @@ This is the **frontend** of an authentication system built with **Next.js 15+**,
 
 ### **1️1 Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/frontend.git
+git clone https://github.com/Abhay9999Sh/Yolo-frontend.git
 cd frontend
 ```
 ### **2 Install Dependencies**
